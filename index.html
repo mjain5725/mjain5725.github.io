@@ -27,6 +27,15 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+<!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+/>
+  <script
+  src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+</script>
+
 </head>
 
 <body>
@@ -80,7 +89,6 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <p>I am a Full Stack Developer with one and a half years of experience. I have a Masters degree in field of Electrical and Computer from University of Windsor (April 2018 – April 2019), I also have Bachelors Degree from Guru Gobind Singh Indraprastha University (August 2013- July 2017) in the field of Electronics and Communication. I love to read, paint, sketch and play football. </p>
         </div>
 
         <div class="row">
@@ -88,28 +96,7 @@
             <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Full Stack Developer.</h3>
-            <p class="font-italic">
-              Full Stack developer who loves to explore new technologies. Quick learner and adaptive in nature.
-            </p>
-            <div class="row">
-              <div class="col-lg-5">
-                <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 25 August 1995</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> Master</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +1 (226)-961-4042</li>
-                </ul>
-              </div>
-              <div class="col-lg-7">
-                <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 25</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> manish.jain5725@gmail.com</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Toronto, Canada</li>
-                </ul>
-              </div>
-            </div>
-            <p>
-              I have worked on web applications for Loblaws giving me the experience to work in the team. I have working knowledge of frameworks like Angular and React and have also worked on the website for Aureus Infosys (Link provided below in projects).
+            <p>I am a Full Stack Developer with two years of experience. Completed Masters degree in field of Electrical and Computer from University of Windsor (April 2018 – May 2019), and Bachelors Degree from Guru Gobind Singh Indraprastha University (August 2013- July 2017) in the field of Electronics and Communication. I love to read, paint, sketch,  play football and learn about new technologies. I have working knowledge of frameworks like Angular and React. 
             </p>
           </div>
           <!-- <div><a href="assets/Resume.pdf" download="Resume.pdf">Download my Resume</a></div> -->
@@ -218,9 +205,9 @@
             </div>
 
             <div class="progress">
-              <span class="skill">React <i class="val">70%</i></span>
+              <span class="skill">React <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
@@ -281,6 +268,12 @@
           </div>
           <div class="col-lg-6" data-aos="fade-up">              
             <div class="progress">
+              <span class="skill">Redux <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
               <span class="skill">Git <i class="val">70%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
@@ -320,8 +313,8 @@
 
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Summary</h3>
-            <div class="resume-item pb-0">
+<!--             <h3 class="resume-title">Summary</h3>
+ --><!--             <div class="resume-item pb-0">
               <h4>Manish Jain</h4>
               <p><em>An innovative programmer with almost two years of experience as an application developer; with a positive attitude, extremely focused with an ability to multitask, excellent leadership skills, an amazing team player with a great task and time managing skills, and a track record of consistently exceeding expectations.</em></p>
               <ul>
@@ -329,7 +322,7 @@
                 <li>(226) 961-4042</li>
                 <li>manish.jain5725@gmail.com</li>
               </ul>
-            </div>
+            </div> -->
 
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
@@ -463,6 +456,28 @@
             </div>
           </div>
       </div>
+
+      <div class="calendar">
+    <!-- Loading stuff -->
+    Loading the data just for you.
+</div>
+
+<script>
+    GitHubCalendar(".calendar", "your-username");
+
+    // or enable responsive functionality:
+    GitHubCalendar(".calendar", "your-username", { responsive: true });
+
+    // Use a proxy
+    GitHubCalendar(".calendar", "your-username", {
+       proxy (username) {
+         return fetch(`https://your-proxy.com/github?user=${username}`)
+       }
+    }).then(r => r.text())
+</script>
+
+
+      
     </section><!-- End Portfolio Section -->
 
 
@@ -472,7 +487,7 @@
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>For more information kindly give a call or drop an email provided below. <br> <b><em>Thank you</em></b></p>
+<!--           <p>For more information kindly give a call or drop an email provided below. <br> <b><em>Thank you</em></b></p> -->
         </div>
 
         <div class="row" data-aos="fade-in">
