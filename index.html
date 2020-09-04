@@ -27,15 +27,15 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+      <script
+  src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+</script>
+
 <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
 <link
   rel="stylesheet"
   href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
 />
-  <script
-  src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
-</script>
-
 </head>
 
 <body>
@@ -463,15 +463,15 @@
 </div>
 
 <script>
-    GitHubCalendar(".calendar", "your-username");
+    GitHubCalendar(".calendar", "mjain5725");
 
     // or enable responsive functionality:
-    GitHubCalendar(".calendar", "your-username", { responsive: true });
+    GitHubCalendar(".calendar", "mjain5725", { responsive: true });
 
     // Use a proxy
-    GitHubCalendar(".calendar", "your-username", {
+    GitHubCalendar(".calendar", "mjain5725", {
        proxy (username) {
-         return fetch(`https://your-proxy.com/github?user=${username}`)
+         return fetch(`https://your-proxy.com/github?user=${mjain5725}`)
        }
     }).then(r => r.text())
 </script>
@@ -569,6 +569,8 @@
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
+
+
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
